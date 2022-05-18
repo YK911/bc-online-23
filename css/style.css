@@ -1,0 +1,63 @@
+:root {
+  /* Text colors */
+  --main-txt-cl: #22343d;
+  --accent-txt-cl: #02897a;
+  --secondary-txt-cl: #ffffff;
+  --logo-cl: #173a56;
+  /* Bg colors */
+
+  /* Others */
+}
+
+/* Common styles */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1.62;
+  color: var(--main-txt-cl);
+}
+
+.link {
+  text-decoration: none;
+  color: currentColor;
+}
+
+.list {
+  list-style: none;
+}
+
+.main-button, .accent-button {
+    font-family: inherit;
+    font-weight: 600;
+    line-height: 1.5;
+    
+    
+}
+
+.main-button {
+    color: var(--logo-cl);
+    background-color: var(--secondary-txt-cl);
+}
+
+.accent-button {
+    color: var(--secondary-txt-cl);
+    background-color: var(--accent-txt-cl);
+}
+
+/* Header styles */
+
+.logo {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 0.93;
+  color: var(--logo-cl);
+}
+
+.nav-link {
+  line-height: 1.75;
+  color: var(--main-txt-cl);
+}
+.nav-link.current {
+  font-weight: 600;
+}
