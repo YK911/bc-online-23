@@ -14,40 +14,46 @@
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
     <!-- Favicon end -->
+    <!-- Fonts start -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Montserrat:wght@600&family=Poppins:wght@400;500;600;700&family=Roboto:wght@500;900&display=swap" rel="stylesheet">
+    <!-- Fonts end -->
+    <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
     <!-- Header section -->
     <header class="header">
-      <a href="./index.html">
+      <a class="logo header-logo link" href="./index.html">
         <img src="./images/header/logo.svg" alt="logo" width="40" height="36" />
         Product
       </a>
 
-      <nav>
-        <ul>
-          <li>
-            <a href="./index.html">Products</a>
+      <nav class="navigation">
+        <ul class="nav-list list">
+          <li class="nav-item">
+            <a class="nav-link link current" href="./index.html">Products</a>
           </li>
-          <li>
-            <a href="./customers.html">Customers</a>
+          <li class="nav-item">
+            <a class="nav-link link" href="./customers.html">Customers</a>
           </li>
-          <li>
-            <a href="./pricing.html">Pricing</a>
+          <li class="nav-item">
+            <a class="nav-link link" href="./pricing.html">Pricing</a>
           </li>
-          <li>
-            <a href="">Resources</a>
+          <li class="nav-item">
+            <a class="nav-link link" href="">Resources</a>
           </li>
         </ul>
       </nav>
-      <ul>
-        <li>
-          <button type="button">Sign In</button>
+      <ul class="auth-list list">
+        <li class="auth-item">
+          <button class="auth-button main-button" type="button">Sign In</button>
         </li>
-        <li>
-          <button type="button">Sign Up</button>
+        <li class="auth-item">
+          <button class="auth-button accent-button" type="button">Sign Up</button>
         </li>
       </ul>
-      <button type="button">switch theme</button>
+      <button class="theme-switcher" type="button">switch theme</button>
     </header>
     <main>
       <!-- Hero section -->
@@ -58,7 +64,7 @@
           to imagine your next user experience.
         </p>
         <button type="button">Get started</button>
-        <a href="" target="_blank" rel="noopener noreferrer">
+        <a class="link" href="" target="_blank" rel="noopener noreferrer">
           <img src="./images/hero/play-icon.svg" alt="play" width="20" height="18" />
           Watch the Video
         </a>
@@ -68,7 +74,7 @@
       <!-- Features section -->
       <section class="feature">
         <h2>Product was Built Specifically for You</h2>
-        <ul>
+        <ul class="list">
           <li>
             <img
               src="./images/features/feature-icon-1.svg"
@@ -120,7 +126,7 @@
           The Myspace page defines the individual, his or her characteristics, traits, personal
           choices and the overall personality of the person.
         </p>
-        <ul>
+        <ul class="list">
           <li>
             <h3>Accessory makers</h3>
             <p>
@@ -158,7 +164,7 @@
           The Myspace page defines the individual, his or her characteristics, traits, personal
           choices and the overall personality of the person.
         </p>
-        <ul>
+        <ul class="list">
           <li>
             <img src="./images/support/icon-orange.svg" alt="icon" width="35" height="35" />
             <p>Never worry about overpaying for your energy again.</p>
@@ -183,7 +189,7 @@
           Few would argue that, despite the advancements of feminism over the past three decades,
           women still face a double standard when it comes to their behavior.
         </p>
-        <ul>
+        <ul class="list">
           <li>
             <h3>Accessory makers</h3>
             <p>
@@ -214,7 +220,7 @@
           Do you require some help for your project: Conception workshop, prototyping, marketing
           strategy, landing page, Ux/UI?
         </p>
-        <ul>
+        <ul class="list">
           <li>
             <img
               src="./images/customer-support/avatar-1.png"
@@ -261,7 +267,7 @@
         <p>
           We focus on ergonomics and meeting you where you work. It&#8242;s only a keystroke away.
         </p>
-        <ul>
+        <ul class="list">
           <li>
             <img
               src="./images/contents-strategies/strategy-1.jpg"
@@ -300,7 +306,7 @@
         <h2>Price Table</h2>
         <p>We offer competitive price</p>
 
-        <ul>
+        <ul class="list">
           <li>
             <h3>Free</h3>
             <p>Brief price description</p>
@@ -308,7 +314,7 @@
               <p>0</p>
               <div><span>&#x24;</span> <span>Per/month</span></div>
             </div>
-            <ul>
+            <ul class="list">
               <li>Only 2 Operators</li>
               <li>Notifications</li>
               <li>Landing Pages</li>
@@ -322,7 +328,7 @@
               <p>5</p>
               <div><span>&#x24;</span> <span>Per/month</span></div>
             </div>
-            <ul>
+            <ul class="list">
               <li>5+ Operators</li>
               <li>Notifications</li>
               <li>Landing Pages</li>
@@ -336,7 +342,7 @@
               <p>10</p>
               <div><span>&#x24;</span> <span>Per/month</span></div>
             </div>
-            <ul>
+            <ul class="list">
               <li>10+ Operators</li>
               <li>Notifications</li>
               <li>Landing Pages</li>
@@ -353,7 +359,7 @@
           Problems trying to resolve the conflict between the two major realms of Classical physics:
           Newtonian mechanics
         </p>
-        <ul>
+        <ul class="list">
           <li>
             <div>
               <span>&#9733;</span>
@@ -427,23 +433,23 @@
     </main>
     <footer>
       <div>
-        <a href="./index.html">
+        <a class="link" href="./index.html">
           <img src="./images/header/logo.svg" alt="logo" width="32" height="29" />
           <p>Product</p>
         </a>
-        <ul>
+        <ul class="list">
           <li>
-            <a href="" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <a class="link" href="" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
               <img src="./images/footer/instagram.svg" alt="instagram" width="24" height="24" />
             </a>
           </li>
           <li>
-            <a href="" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+            <a class="link" href="" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
               <img src="./images/footer/facebook.svg" alt="facebook" width="24" height="24" />
             </a>
           </li>
           <li>
-            <a href="" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+            <a class="link" href="" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
               <img src="./images/footer/twitter.svg" alt="twitter" width="24" height="24" />
             </a>
           </li>
@@ -451,20 +457,20 @@
       </div>
       <div>
         <h2>Resource</h2>
-        <ul>
-          <li><a href="">About Us</a></li>
-          <li><a href="">Blog</a></li>
-          <li><a href="">Contact</a></li>
-          <li><a href="">FAQ</a></li>
+        <ul class="list">
+          <li><a class="link" href="">About Us</a></li>
+          <li><a class="link" href="">Blog</a></li>
+          <li><a class="link" href="">Contact</a></li>
+          <li><a class="link" href="">FAQ</a></li>
         </ul>
       </div>
       <div>
         <h2>Legal Stuff</h2>
-        <ul>
-          <li><a href="">Disclaimer</a></li>
-          <li><a href="">Financing</a></li>
-          <li><a href="">Privacy Policy</a></li>
-          <li><a href="">Terms of Servic</a></li>
+        <ul class="list">
+          <li><a class="link" href="">Disclaimer</a></li>
+          <li><a class="link" href="">Financing</a></li>
+          <li><a class="link" href="">Privacy Policy</a></li>
+          <li><a class="link" href="">Terms of Servic</a></li>
         </ul>
       </div>
       <div>
