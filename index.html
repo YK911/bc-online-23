@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product</title>
+    <!-- Favicon start -->
     <link rel="apple-touch-icon" sizes="76x76" href="./images/favicon/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png" />
@@ -12,135 +13,174 @@
     <link rel="mask-icon" href="./images/favicon/safari-pinned-tab.svg" color="#5bbad5" />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
+    <!-- Favicon end -->
+    <!-- Fonts start -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Montserrat:wght@600&family=Poppins:wght@400;500;600;700&family=Roboto:wght@500;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Normalize -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Fonts end -->
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <!-- Header section -->
     <header class="header">
-      <a href="./index.html">
+      <a class="logo header-logo link" href="./index.html">
         <img src="./images/header/logo.svg" alt="logo" width="40" height="36" />
         Product
       </a>
 
-      <nav>
-        <ul>
-          <li>
-            <a href="./index.html">Products</a>
+      <nav class="navigation">
+        <ul class="nav-list list">
+          <li class="nav-item">
+            <a class="nav-link link current" href="./index.html">Products</a>
           </li>
-          <li>
-            <a href="./customers.html">Customers</a>
+          <li class="nav-item">
+            <a class="nav-link link" href="./customers.html">Customers</a>
           </li>
-          <li>
-            <a href="./pricing.html">Pricing</a>
+          <li class="nav-item">
+            <a class="nav-link link" href="./pricing.html">Pricing</a>
           </li>
-          <li>
-            <a href="">Resources</a>
+          <li class="nav-item">
+            <a class="nav-link link" href="">Resources</a>
           </li>
         </ul>
       </nav>
-      <ul>
-        <li>
-          <button type="button">Sign In</button>
+      <ul class="auth-list list">
+        <li class="auth-item">
+          <button class="auth-button main-button" type="button">Sign In</button>
         </li>
-        <li>
-          <button type="button">Sign Up</button>
+        <li class="auth-item">
+          <button class="auth-button accent-button" type="button">Sign Up</button>
         </li>
       </ul>
-      <button type="button">switch theme</button>
+      <button class="theme-switcher" type="button">switch theme</button>
     </header>
     <main>
       <!-- Hero section -->
-      <section class="hero">
-        <h1>Work at the speed of thought</h1>
-        <p>
-          Tools, tutorials, design and innovation experts, all in one place! The most intuitive way
-          to imagine your next user experience.
-        </p>
-        <button type="button">Get started</button>
-        <a href="" target="_blank" rel="noopener noreferrer">
-          <img src="./images/hero/play-icon.svg" alt="play" width="20" height="18" />
-          Watch the Video
-        </a>
-        <img src="./images/hero/hero-img.svg" alt="social communication" width="610" height="555" />
+      <section class="section hero">
+        <div class="container">
+          <div class="hero-left-side">
+            <h1 class="hero-title">Work at the speed of&nbsp;thought</h1>
+            <p class="hero-desc">
+              Tools, tutorials, design and innovation experts, all in one place! The most intuitive
+              way to imagine your next user experience.
+            </p>
+            <button class="hero-btn accent-button" type="button">Get started</button>
+            <a class="hero-link" href="" target="_blank" rel="noopener noreferrer">
+              <img src="./images/hero/play-icon.svg" alt="play" width="20" height="18" />
+              Watch the Video
+            </a>
+          </div>
+          <img
+            src="./images/hero/hero-img.svg"
+            alt="social communication"
+            width="610"
+            height="555"
+          />
+        </div>
       </section>
 
       <!-- Features section -->
-      <section class="feature">
-        <h2>Product was Built Specifically for You</h2>
-        <ul>
-          <li>
-            <img
-              src="./images/features/feature-icon-1.svg"
-              alt="first icon"
-              width="50"
-              height="50"
-            />
-            <h3>First click tests</h3>
-            <p>While most people enjoy casino gambling,</p>
-          </li>
-          <li>
-            <img
-              src="./images/features/feature-icon-2.svg"
-              alt="second icon"
-              width="50"
-              height="50"
-            />
-            <h3>Design surveys</h3>
-            <p>Sports betting, lottery and bingo playing for the fun</p>
-          </li>
-          <li>
-            <img
-              src="./images/features/feature-icon-3.svg"
-              alt="trird icon"
-              width="50"
-              height="50"
-            />
-            <h3>Preference tests</h3>
-            <p>The Myspace page defines the individual.</p>
-          </li>
-          <li>
-            <img
-              src="./images/features/feature-icon-4.svg"
-              alt="forth icon"
-              width="50"
-              height="50"
-            />
-            <h3>Five second tests</h3>
-            <p>Personal choices and the overall personality of the person.</p>
-          </li>
-        </ul>
-        <button type="button">SIGN UP NOW</button>
+      <section class="section feature">
+        <div class="container">
+          <h2 class="title title-small feature-title">Product was Built Specifically for You</h2>
+          <ul class="feature-list list">
+            <li class="feature-item">
+              <img
+                class="feature-icon"
+                src="./images/features/feature-icon-1.svg"
+                alt="first icon"
+                width="50"
+                height="50"
+              />
+              <h3 class="feature-item-title">First click tests</h3>
+              <p>While most people enjoy casino gambling,</p>
+            </li>
+            <li class="feature-item">
+              <img
+                class="feature-icon"
+                src="./images/features/feature-icon-2.svg"
+                alt="second icon"
+                width="50"
+                height="50"
+              />
+              <h3 class="feature-item-title">Design surveys</h3>
+              <p>Sports betting, lottery and bingo playing for the fun</p>
+            </li>
+            <li class="feature-item">
+              <img
+                class="feature-icon"
+                src="./images/features/feature-icon-3.svg"
+                alt="trird icon"
+                width="50"
+                height="50"
+              />
+              <h3 class="feature-item-title">Preference tests</h3>
+              <p>The Myspace page defines the individual.</p>
+            </li>
+            <li class="feature-item">
+              <img
+                class="feature-icon"
+                src="./images/features/feature-icon-4.svg"
+                alt="forth icon"
+                width="50"
+                height="50"
+              />
+              <h3 class="feature-item-title">Five second tests</h3>
+              <p>Personal choices and the overall personality of the person.</p>
+            </li>
+          </ul>
+          <button class="accent-button" type="button">SIGN UP NOW</button>
+        </div>
       </section>
 
       <!-- Business management section -->
-      <section class="business-management">
-        <h2>Effortless Validation for <span>Management</span></h2>
-        <p>
-          The Myspace page defines the individual, his or her characteristics, traits, personal
-          choices and the overall personality of the person.
-        </p>
-        <ul>
-          <li>
-            <h3>Accessory makers</h3>
-            <p>
-              While most people enjoy casino gambling, sports betting, lottery and bingo playing for
-              the fun
+      <section class="section business-management">
+        <div class="container">
+          <div class="business-management-left-side">
+            <h2 class="title title-small">
+              <span class="text-small">Effortless Validation for</span>Management
+            </h2>
+            <p class="business-management-desc">
+              The Myspace page defines the individual, his or her characteristics, traits, personal
+              choices and the overall personality of the person.
             </p>
-          </li>
-          <li>
-            <h3>Alterationists</h3>
-            <p>
-              If you are looking for a new way to promote your business that won’t cost you more
-              money,
-            </p>
-          </li>
-        </ul>
+            <ul class="list">
+              <li class="business-management-item">
+                <h3 class="business-management-subtitle">Accessory makers</h3>
+                <p>
+                  While most people enjoy casino gambling, sports betting, lottery and bingo playing
+                  for the fun
+                </p>
+              </li>
+              <li class="business-management-item">
+                <h3 class="business-management-subtitle">Alterationists</h3>
+                <p>
+                  If you are looking for a new way to promote your business that won’t cost you more
+                  money,
+                </p>
+              </li>
+            </ul>
+          </div>
 
-        <img
-          src="./images/business-management/business-management.svg"
-          alt="features documents"
-          width="541"
-          height="474"
-        />
+          <img
+            src="./images/business-management/business-management.svg"
+            alt="features documents"
+            width="541"
+            height="474"
+          />
+        </div>
       </section>
 
       <!-- Support section -->
@@ -181,13 +221,13 @@
       </section>
 
       <!-- Collaboration section -->
-      <section class="collaboration">
-        <h2>Optimisation for <span>Collaborative</span></h2>
+      <section class="section collaboration">
+        <h2 class="title title-small">Optimisation for <span>Collaborative</span></h2>
         <p>
           Few would argue that, despite the advancements of feminism over the past three decades,
           women still face a double standard when it comes to their behavior.
         </p>
-        <ul>
+        <ul class="list">
           <li>
             <h3>Accessory makers</h3>
             <p>
@@ -212,13 +252,13 @@
       </section>
 
       <!-- Staff section -->
-      <section class="staff">
-        <h2>Quick & Easy Process</h2>
+      <section class="section staff">
+        <h2 class="title title-small">Quick & Easy Process</h2>
         <p>
           Do you require some help for your project: Conception workshop, prototyping, marketing
           strategy, landing page, Ux/UI?
         </p>
-        <ul>
+        <ul class="list">
           <li>
             <img
               src="./images/customer-support/avatar-1.png"
@@ -260,12 +300,12 @@
       </section>
 
       <!-- News feed Strategies -->
-      <section class="news-feed">
-        <h2>Contents Strategies</h2>
+      <section class="section news-feed">
+        <h2 class="title title-medium">Contents Strategies</h2>
         <p>
           We focus on ergonomics and meeting you where you work. It&#8242;s only a keystroke away.
         </p>
-        <ul>
+        <ul class="list">
           <li>
             <img
               src="./images/contents-strategies/strategy-1.jpg"
@@ -300,11 +340,11 @@
       </section>
 
       <!--Price-->
-      <section>
-        <h2>Price Table</h2>
+      <section class="section price">
+        <h2 class="title title-medium">Price Table</h2>
         <p>We offer competitive price</p>
 
-        <ul>
+        <ul class="list">
           <li>
             <h3>Free</h3>
             <p>Brief price description</p>
@@ -312,7 +352,7 @@
               <p>0</p>
               <div><span>&#x24;</span> <span>Per/month</span></div>
             </div>
-            <ul>
+            <ul class="list">
               <li>Only 2 Operators</li>
               <li>Notifications</li>
               <li>Landing Pages</li>
@@ -326,7 +366,7 @@
               <p>5</p>
               <div><span>&#x24;</span> <span>Per/month</span></div>
             </div>
-            <ul>
+            <ul class="list">
               <li>5+ Operators</li>
               <li>Notifications</li>
               <li>Landing Pages</li>
@@ -340,7 +380,7 @@
               <p>10</p>
               <div><span>&#x24;</span> <span>Per/month</span></div>
             </div>
-            <ul>
+            <ul class="list">
               <li>10+ Operators</li>
               <li>Notifications</li>
               <li>Landing Pages</li>
@@ -351,13 +391,13 @@
       </section>
 
       <!--Review-->
-      <section>
-        <h2>What Clients Say</h2>
+      <section class="section review">
+        <h2 class="title title-medium">What Clients Say</h2>
         <p>
           Problems trying to resolve the conflict between the two major realms of Classical physics:
           Newtonian mechanics
         </p>
-        <ul>
+        <ul class="list">
           <li>
             <div>
               <span>&#9733;</span>
@@ -420,8 +460,9 @@
           </li>
         </ul>
       </section>
+
       <!--baner-->
-      <section>
+      <section class="section banner">
         <div>
           <h2>Join 100 Compannies who boost their business with Product</h2>
           <button type="button">Get This</button>
@@ -431,23 +472,29 @@
     </main>
     <footer>
       <div>
-        <a href="./index.html">
+        <a class="link" href="./index.html">
           <img src="./images/header/logo.svg" alt="logo" width="32" height="29" />
           <p>Product</p>
         </a>
-        <ul>
+        <ul class="list">
           <li>
-            <a href="" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <a
+              class="link"
+              href=""
+              aria-label="Instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src="./images/footer/instagram.svg" alt="instagram" width="24" height="24" />
             </a>
           </li>
           <li>
-            <a href="" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+            <a class="link" href="" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
               <img src="./images/footer/facebook.svg" alt="facebook" width="24" height="24" />
             </a>
           </li>
           <li>
-            <a href="" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+            <a class="link" href="" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
               <img src="./images/footer/twitter.svg" alt="twitter" width="24" height="24" />
             </a>
           </li>
@@ -455,20 +502,20 @@
       </div>
       <div>
         <h2>Resource</h2>
-        <ul>
-          <li><a href="">About Us</a></li>
-          <li><a href="">Blog</a></li>
-          <li><a href="">Contact</a></li>
-          <li><a href="">FAQ</a></li>
+        <ul class="list">
+          <li><a class="link" href="">About Us</a></li>
+          <li><a class="link" href="">Blog</a></li>
+          <li><a class="link" href="">Contact</a></li>
+          <li><a class="link" href="">FAQ</a></li>
         </ul>
       </div>
       <div>
         <h2>Legal Stuff</h2>
-        <ul>
-          <li><a href="">Disclaimer</a></li>
-          <li><a href="">Financing</a></li>
-          <li><a href="">Privacy Policy</a></li>
-          <li><a href="">Terms of Servic</a></li>
+        <ul class="list">
+          <li><a class="link" href="">Disclaimer</a></li>
+          <li><a class="link" href="">Financing</a></li>
+          <li><a class="link" href="">Privacy Policy</a></li>
+          <li><a class="link" href="">Terms of Servic</a></li>
         </ul>
       </div>
       <div>
