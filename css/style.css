@@ -155,10 +155,27 @@ p {
 }
 
 /* Feature section */
+.title {
+  width: 534px;
+  margin-bottom: 66px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.feature-list {
+  margin-bottom: 34px;
+}
+.feature-item {
+  width: 240px;
+}
+.feature-icon {
+  margin-bottom: 30px;
+}
 .feature-item-title {
   font-weight: 600;
   font-size: 22px;
   line-height: 1.5;
+  margin-bottom: 13px;
 
   color: #22343d;
 }
