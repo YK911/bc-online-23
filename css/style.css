@@ -1,0 +1,227 @@
+:root {
+  /* Text colors */
+  --main-txt-cl: #22343d;
+  --accent-txt-cl: #02897a;
+  --secondary-txt-cl: #ffffff;
+  --logo-cl: #173a56;
+  /* Bg colors */
+
+  /* Others */
+  --boreder: 4px;
+}
+
+/* Common styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1.62;
+  color: var(--main-txt-cl);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.section {
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+.container {
+  outline: 1px solid red;
+  width: 1150px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.link {
+  text-decoration: none;
+  color: currentColor;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  font-weight: 700;
+  line-height: 1.5;
+
+  color: #22343d;
+}
+
+.title-small {
+  margin-bottom: 23px;
+  font-size: 32px;
+}
+
+.title-medium {
+  font-size: 34px;
+}
+
+.main-button,
+.accent-button {
+  max-width: 216px;
+  min-width: 110px;
+  padding: 14px 33px;
+  font-family: inherit;
+  font-weight: 600;
+  line-height: 1.5;
+
+  border: 1px solid transparent;
+  border-radius: var(--boreder);
+  cursor: pointer;
+}
+
+.main-button {
+  border-color: #bcd0e5;
+
+  color: var(--logo-cl);
+  background-color: var(--secondary-txt-cl);
+}
+
+.accent-button {
+  color: var(--secondary-txt-cl);
+  background-color: var(--accent-txt-cl);
+}
+
+/* Семантичне приховування елементів */
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+/* Header styles */
+.logo {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 0.93;
+  color: var(--logo-cl);
+}
+
+.nav-link {
+  line-height: 1.75;
+  color: var(--main-txt-cl);
+}
+.nav-link.current {
+  font-weight: 600;
+}
+
+/* Hero section */
+.hero-title {
+  width: 527px;
+  margin-bottom: 18px;
+
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.5;
+
+  color: #22343d;
+}
+
+.hero-desc {
+  width: 466px;
+  margin-bottom: 45px;
+
+  font-size: 18px;
+  line-height: 1.56;
+
+  color: #22343d;
+}
+
+.hero-btn {
+  margin-right: 30px;
+}
+
+.hero-link {
+  color: #02897a;
+}
+
+/* Feature section */
+.feature-title {
+  width: 534px;
+  margin-bottom: 66px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.feature-list {
+  margin-bottom: 34px;
+}
+.feature-item {
+  width: 240px;
+}
+.feature-icon {
+  margin-bottom: 30px;
+}
+.feature-item-title {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.5;
+  margin-bottom: 13px;
+
+  color: #22343d;
+}
+
+/* Business management */
+.business-management-left-side {
+  width: 486px;
+}
+
+.text-small {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.business-management-desc {
+  margin-bottom: 30px;
+}
+
+.business-management-item {
+  margin-bottom: 25px;
+}
+
+.business-management-item:last-child {
+  margin-bottom: 0;
+}
+
+.business-management-subtitle {
+  margin-bottom: 12px;
+}
+
+/* Support-section */
+.support-right-side{
+  width: 495px;
+}
+
+.support-description{
+  margin-bottom: 30px;
+}
+
+.support-list-item{
+  margin-bottom: 30px;
+}
+
+.support-list-item:last-child{
+  margin-bottom: 0;
+}
