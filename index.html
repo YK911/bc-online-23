@@ -21,6 +21,14 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Montserrat:wght@600&family=Poppins:wght@400;500;600;700&family=Roboto:wght@500;900&display=swap"
       rel="stylesheet"
     />
+    <!-- Normalize -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- Fonts end -->
     <link rel="stylesheet" href="./css/style.css" />
   </head>
@@ -60,22 +68,31 @@
     </header>
     <main>
       <!-- Hero section -->
-      <section class="hero">
-        <h1 class="hero-title">Work at the speed of thought</h1>
-        <p class="hero-desc">
-          Tools, tutorials, design and innovation experts, all in one place! The most intuitive way
-          to imagine your next user experience.
-        </p>
-        <button class="hero-btn accent-button" type="button">Get started</button>
-        <a class="hero-link" href="" target="_blank" rel="noopener noreferrer">
-          <img src="./images/hero/play-icon.svg" alt="play" width="20" height="18" />
-          Watch the Video
-        </a>
-        <img src="./images/hero/hero-img.svg" alt="social communication" width="610" height="555" />
+      <section class="section hero">
+        <div class="container">
+          <div class="hero-left-side">
+            <h1 class="hero-title">Work at the speed of&nbsp;thought</h1>
+            <p class="hero-desc">
+              Tools, tutorials, design and innovation experts, all in one place! The most intuitive
+              way to imagine your next user experience.
+            </p>
+            <button class="hero-btn accent-button" type="button">Get started</button>
+            <a class="hero-link" href="" target="_blank" rel="noopener noreferrer">
+              <img src="./images/hero/play-icon.svg" alt="play" width="20" height="18" />
+              Watch the Video
+            </a>
+          </div>
+          <img
+            src="./images/hero/hero-img.svg"
+            alt="social communication"
+            width="610"
+            height="555"
+          />
+        </div>
       </section>
 
       <!-- Features section -->
-      <section class="feature">
+      <section class="section feature">
         <h2 class="title title-small">Product was Built Specifically for You</h2>
         <ul class="feature-list list">
           <li class="feature-item">
@@ -127,7 +144,7 @@
       </section>
 
       <!-- Business management section -->
-      <section class="business-management">
+      <section class="section business-management">
         <h2 class="title title-small">Effortless Validation for <span>Management</span></h2>
         <p>
           The Myspace page defines the individual, his or her characteristics, traits, personal
@@ -159,7 +176,7 @@
       </section>
 
       <!-- Support section -->
-      <section class="support">
+      <section class="section support">
         <img
           src="./images/support/customers-support.svg"
           alt="customers support"
@@ -190,7 +207,7 @@
       </section>
 
       <!-- Collaboration section -->
-      <section class="collaboration">
+      <section class="section collaboration">
         <h2 class="title title-small">Optimisation for <span>Collaborative</span></h2>
         <p>
           Few would argue that, despite the advancements of feminism over the past three decades,
@@ -221,7 +238,7 @@
       </section>
 
       <!-- Staff section -->
-      <section class="staff">
+      <section class="section staff">
         <h2 class="title title-small">Quick & Easy Process</h2>
         <p>
           Do you require some help for your project: Conception workshop, prototyping, marketing
@@ -269,7 +286,7 @@
       </section>
 
       <!-- News feed Strategies -->
-      <section class="news-feed">
+      <section class="section news-feed">
         <h2 class="title title-medium">Contents Strategies</h2>
         <p>
           We focus on ergonomics and meeting you where you work. It&#8242;s only a keystroke away.
@@ -309,7 +326,7 @@
       </section>
 
       <!--Price-->
-      <section>
+      <section class="section price">
         <h2 class="title title-medium">Price Table</h2>
         <p>We offer competitive price</p>
 
@@ -360,7 +377,7 @@
       </section>
 
       <!--Review-->
-      <section>
+      <section class="section review">
         <h2 class="title title-medium">What Clients Say</h2>
         <p>
           Problems trying to resolve the conflict between the two major realms of Classical physics:
@@ -429,8 +446,9 @@
           </li>
         </ul>
       </section>
+
       <!--baner-->
-      <section>
+      <section class="section banner">
         <div>
           <h2>Join 100 Compannies who boost their business with Product</h2>
           <button type="button">Get This</button>
