@@ -208,3 +208,21 @@ p {
 .business-management-subtitle {
   margin-bottom: 12px;
 }
+
+/* collaboration section*/
+.collaboration-left {
+  width: 486px;
+
+}
+.collaboration-text {
+  margin-bottom: 30px;
+}
+.collaboration-item {
+  margin-bottom: 25px;
+}
+.collaboration-item:last-child {
+  margin-bottom: 0;
+}
+.collaboration-item-title {
+  margin-bottom: 12px;
+}
