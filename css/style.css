@@ -71,6 +71,7 @@ p {
 
 .title-medium {
   font-size: 34px;
+  margin-bottom: 8px;
 }
 
 .main-button,
@@ -383,15 +384,40 @@ p {
   margin-right: 16px;
 }
 
-.staff-item:nth-child(4n+1),
-.staff-item:nth-child(4n+4) {
+.staff-item:nth-child(4n + 1),
+.staff-item:nth-child(4n + 4) {
   flex-direction: row;
 }
-.staff-item:nth-child(3n+1) .staff-item-quote {
+.staff-item:nth-child(3n + 1) .staff-item-quote {
   margin-left: 16px;
   margin-right: 0;
 }
-.stuff-btn {
+.staff-btn {
   display: block;
   margin: 0 auto;
+}
+
+/* Contents Strategys */
+.news-feed-txt {
+  margin-bottom: 33px;
+}
+.news-feed-list {
+  --items: 3;
+  --indent: 32px;
+}
+.news-feed-wrapper {
+  padding: 24px 24px 40px;
+}
+.news-feed-semi-txt {
+  margin-bottom: 12px;
+}
+.news-feed-item {
+  border: 1px solid #dedede;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.news-feed-semi-bold-txt {
+  font-weight: 700;
+  line-height: 1.75;
+  color: #22343d;
 }
