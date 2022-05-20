@@ -142,21 +142,42 @@ p {
 }
 
 /* Header styles */
+.header-box {
+  display: flex;
+  align-items: center;
+}
+
 .logo {
   font-weight: 700;
   font-size: 30px;
   line-height: 0.93;
   color: var(--logo-cl);
+  display: flex;
+  align-items: center;
+  margin-right: auto;
 }
-
-.nav-link {
+.navigation {
+  margin-right: 24px;
+}
+.nav-list {
+  display: flex;
+}
+.nav-item:not(:last-child) {
+  margin-right: 30px;
+}
+.auth-list .nav-link {
   line-height: 1.75;
   color: var(--main-txt-cl);
 }
 .nav-link.current {
   font-weight: 600;
 }
-
+.auth-list {
+  display: flex;
+}
+.auth-item:not(:last-child) {
+  margin-right: 24px;
+}
 /* Hero section */
 .hero-container {
   display: flex;
