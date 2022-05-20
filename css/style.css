@@ -209,10 +209,25 @@ p {
   margin-bottom: 12px;
 }
 
-/* collaboration section*/
+/* Support section*/
+.support-right-side {
+  width: 495px;
+}
+
+.support-description {
+  margin-bottom: 30px;
+}
+
+.support-list-item {
+  margin-bottom: 30px;
+}
+.support-list-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Сollaboration section*/
 .collaboration-left {
   width: 486px;
-
 }
 .collaboration-text {
   margin-bottom: 30px;
