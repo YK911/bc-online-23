@@ -70,6 +70,7 @@ p {
 }
 
 .title-medium {
+  text-align: center;
   font-size: 34px;
   margin-bottom: 8px;
 }
@@ -490,7 +491,11 @@ p {
 }
 
 /* Contents Strategys */
+.news-feed-title {
+  text-align: left;
+}
 .news-feed-txt {
+  text-align-last: left;
   margin-bottom: 33px;
 }
 .news-feed-list {
@@ -546,4 +551,94 @@ p {
 
 .social-icon {
   fill: currentColor;
+}
+
+/* price */
+
+.title-medium + p {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.price-list {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.price-item {
+  padding: 24px 74px;
+  background: #ffffff;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+}
+.price-item:not(:last-child) {
+  margin-right: 70px;
+}
+
+.price-item-title {
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.67;
+  color: #22343d;
+}
+.price-item-description {
+  margin-bottom: 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 2.5;
+  color: #22343d;
+}
+
+.price-item-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.price-item-cost {
+  margin-right: 8px;
+
+  font-weight: 700;
+  font-size: 76px;
+  line-height: 1.32;
+  /* text-align: center; */
+  letter-spacing: 0.2px;
+  color: #02897a;
+}
+.price-item-period {
+  display: flex;
+  flex-direction: column;
+}
+
+.currency {
+  margin-bottom: 4px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  /* or 125% */
+
+  letter-spacing: 0.1px;
+
+  color: #02897a;
+}
+.period {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height, or 119% */
+
+  letter-spacing: 0.1px;
+
+  /* second text */
+
+  color: #afafaf;
+}
+
+.price-inner-list {
+  /* text-align: center; */
+  margin-bottom: 38px;
+}
+.price-inner-item:not(:last-child) {
+  margin-bottom: 16px;
 }
