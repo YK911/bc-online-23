@@ -181,6 +181,10 @@ img {
   margin-right: auto;
 }
 
+.logo-img {
+  margin-right: 16px;
+}
+
 .navigation {
   margin-right: 24px;
 }
@@ -210,6 +214,15 @@ img {
 
 .auth-item:not(:last-child) {
   margin-right: 24px;
+}
+
+.theme-switcher {
+  padding: 0;
+  margin-left: 23px;
+
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 /* Hero section */
