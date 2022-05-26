@@ -30,6 +30,9 @@
       referrerpolicy="no-referrer"
     />
     <!-- Fonts end -->
+    <!-- Animation library start -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Animation library end -->
     <link rel="stylesheet" href="./css/style.css" />
   </head>
 
@@ -39,7 +42,7 @@
       <div class="container header-box">
         <a class="logo header-logo link" href="./index.html">
           <img class="logo-img" src="./images/header/logo.svg" alt="logo" width="40" height="36" />
-          Product
+          <span class="logo-txt">Product</span>
         </a>
 
         <nav class="navigation">
@@ -67,8 +70,8 @@
           </li>
         </ul>
         <button class="theme-switcher" type="button">
-          <svg class="heme-switcher-icon" width="32" height="32">
-            <use href="./images/icons/sprite.svg#drk-mode"></use>
+          <svg class="theme-switcher-icon" width="32" height="32">
+            <use href="./images/sprite.svg#drk-mode"></use>
           </svg>
         </button>
       </div>
@@ -77,7 +80,7 @@
       <!-- Hero section -->
       <section class="section hero">
         <div class="container hero-container">
-          <div class="hero-left-side">
+          <div class="left-side">
             <h1 class="hero-title">Work at the speed of&nbsp;thought</h1>
             <p class="hero-desc">
               Tools, tutorials, design and innovation experts, all in one place! The most intuitive
@@ -88,10 +91,16 @@
             </button>
             <a class="hero-link" href="" target="_blank" rel="noopener noreferrer">
               <svg class="hero-play-icon" width="20" height="18">
-                <use href="./images/icons/sprite.svg#play-icon"></use>
+                <use href="./images/sprite.svg#play-icon"></use>
               </svg>
-              Watch the Video
+              <span class="anim-text">Watch the Video</span>
             </a>
+          </div>
+
+          <div class="right-side">
+            <svg class="hero-pic" width="610" height="555">
+              <use href="./images/sprite.svg#hero"></use>
+            </svg>
           </div>
         </div>
       </section>
@@ -124,8 +133,8 @@
 
       <!-- Business management section -->
       <section class="section business-management">
-        <div class="container business-management-container">
-          <div class="business-management-left-side">
+        <div class="container flex-container">
+          <div class="left-side" data-aos="fade-right" data-aos-duration="1000">
             <h2 class="title title-small">
               <span class="text-small">Effortless Validation for</span>Management
             </h2>
@@ -151,25 +160,18 @@
             </ul>
           </div>
 
-          <img
-            src="./images/business-management/business-management.svg"
-            alt="features documents"
-            width="541"
-            height="474"
-          />
+          <div class="right-side" data-aos="fade-left" data-aos-duration="1000">
+            <svg width="540" height="474">
+              <use href="./images/sprite.svg#business-management"></use>
+            </svg>
+          </div>
         </div>
       </section>
 
       <!-- Support section -->
       <section class="section support">
-        <div class="container support-container">
-          <img
-            src="./images/support/customers-support.svg"
-            alt="customers support"
-            width="540"
-            height="500"
-          />
-          <div class="support-right-side">
+        <div class="container flex-container support-container">
+          <div class="left-side" data-aos="fade-left" data-aos-duration="1000">
             <h2 class="title title-small">
               <span class="text-small">Easier decision making for</span> Customer Support
             </h2>
@@ -198,13 +200,19 @@
               </li>
             </ul>
           </div>
+
+          <div class="right-side" data-aos="fade-right" data-aos-duration="1000">
+            <svg width="540" height="500">
+              <use href="./images/sprite.svg#customers-support"></use>
+            </svg>
+          </div>
         </div>
       </section>
 
       <!-- Collaboration section -->
       <section class="section collaboration">
-        <div class="container collaboration-container">
-          <div class="collaboration-left-side">
+        <div class="container flex-container">
+          <div class="left-side" data-aos="fade-right" data-aos-duration="1000">
             <h2 class="title title-small">
               <span class="text-small">Optimisation for</span> Collaborative
             </h2>
@@ -229,12 +237,12 @@
               </li>
             </ul>
           </div>
-          <img
-            src="./images/collaboration/collaboration.svg"
-            alt="collaborative"
-            width="540"
-            height="450"
-          />
+
+          <div class="right-side" data-aos="fade-left" data-aos-duration="1000">
+            <svg width="540" height="450">
+              <use href="./images/sprite.svg#collaboration"></use>
+            </svg>
+          </div>
         </div>
       </section>
 
@@ -299,6 +307,7 @@
             <li class="grid-item news-feed-item">
               <div class="news-feed-group">
                 <img
+                  class="news-feed-item-pic"
                   src="./images/contents-strategies/strategy-1.jpg"
                   alt="Increasing Prosperity With Positive Thinking"
                   width="348"
@@ -320,28 +329,28 @@
                   <li class="socials-item">
                     <a class="social-link" href="">
                       <svg class="social-icon" width="20" height="20">
-                        <use href="./images/icons/sprite.svg#instagram"></use>
+                        <use href="./images/sprite.svg#instagram"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="socials-item">
                     <a class="social-link" href="">
                       <svg class="social-icon" width="20" height="20">
-                        <use href="./images/icons/sprite.svg#twitter"></use>
+                        <use href="./images/sprite.svg#twitter"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="socials-item">
                     <a class="social-link" href="">
                       <svg class="social-icon" width="20" height="20">
-                        <use href="./images/icons/sprite.svg#facebook"></use>
+                        <use href="./images/sprite.svg#facebook"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="socials-item">
                     <a class="social-link" href="">
                       <svg class="social-icon" width="20" height="20">
-                        <use href="./images/icons/sprite.svg#linkedin"></use>
+                        <use href="./images/sprite.svg#linkedin"></use>
                       </svg>
                     </a>
                   </li>
@@ -351,6 +360,7 @@
             <li class="grid-item news-feed-item">
               <div class="news-feed-group">
                 <img
+                  class="news-feed-item-pic"
                   src="./images/contents-strategies/strategy-2.jpg"
                   alt="Motivation Is The First Step To Success"
                   width="348"
@@ -371,6 +381,7 @@
             <li class="grid-item news-feed-item">
               <div class="news-feed-group">
                 <img
+                  class="news-feed-item-pic"
                   src="./images/contents-strategies/strategy-3.jpg"
                   alt="Success Steps For Your Personal Or Business"
                   width="348"
@@ -399,10 +410,10 @@
           <p>We offer competitive price</p>
 
           <ul class="list price-list">
-            <li class="price-item">
+            <li class="price-item" data-aos="flip-left" data-aos-delay="200">
               <div class="price-icon-wrapper" data-desc="We offer competitive price">
                 <svg class="price-item-icon" width="25" height="25">
-                  <use href="./images/icons/sprite.svg#icon-question"></use>
+                  <use href="./images/sprite.svg#icon-question"></use>
                 </svg>
               </div>
               <h3 class="price-item-title">Free</h3>
@@ -420,10 +431,15 @@
               </ul>
               <button class="accent-button" type="button">Order Now</button>
             </li>
-            <li class="price-item" data-desc="We offer competitive price">
+            <li
+              class="price-item"
+              data-desc="We offer competitive price"
+              data-aos="flip-left"
+              data-aos-delay="400"
+            >
               <div class="price-icon-wrapper" data-desc="We offer competitive price">
                 <svg class="price-item-icon" width="25" height="25">
-                  <use href="./images/icons/sprite.svg#icon-question"></use>
+                  <use href="./images/sprite.svg#icon-question"></use>
                 </svg>
               </div>
               <h3 class="price-item-title">Standard</h3>
@@ -441,10 +457,15 @@
               </ul>
               <button class="accent-button" type="button">Order Now</button>
             </li>
-            <li class="price-item" data-desc="We offer competitive price">
+            <li
+              class="price-item"
+              data-desc="We offer competitive price"
+              data-aos="flip-left"
+              data-aos-delay="600"
+            >
               <div class="price-icon-wrapper" data-desc="We offer competitive price">
                 <svg class="price-item-icon" width="25" height="25">
-                  <use href="./images/icons/sprite.svg#icon-question"></use>
+                  <use href="./images/sprite.svg#icon-question"></use>
                 </svg>
               </div>
               <h3 class="price-item-title">Premium</h3>
@@ -609,12 +630,15 @@
       <div class="modal">
         <button class="modal-close-btn" type="button" data-modal-close>
           <svg class="modal-close-icon" width="30" height="30">
-            <use href="./images/icons/sprite.svg#icon-close"></use>
+            <use href="./images/sprite.svg#icon-close"></use>
           </svg>
         </button>
       </div>
     </div>
 
     <script src="./js/modal.js"></script>
+    <!-- Animation library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/aos-animation.js"></script>
   </body>
 </html>
