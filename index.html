@@ -21,6 +21,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Montserrat:wght@600&family=Poppins:wght@400;500;600;700&family=Roboto:wght@500;900&display=swap"
       rel="stylesheet"
     />
+    <!-- Fonts end -->
     <!-- Normalize -->
     <link
       rel="stylesheet"
@@ -29,11 +30,23 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- Fonts end -->
+    <!-- Choices styles start  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+    />
+    <!-- Choices styles end  -->
+
     <!-- Animation library start -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- Animation library end -->
     <link rel="stylesheet" href="./css/style.css" />
+    <!-- Header toggler styles start -->
+    <link rel="stylesheet" href="./css/header-toggler.css" />
+    <!-- Header toggler styles end -->
+    <!-- Form styles start -->
+    <link rel="stylesheet" href="./css/form.css" />
+    <!-- Form styles end -->
   </head>
 
   <body>
@@ -69,11 +82,25 @@
             <button class="auth-button accent-button" type="button">Sign Up</button>
           </li>
         </ul>
-        <button class="theme-switcher" type="button">
-          <svg class="theme-switcher-icon" width="32" height="32">
-            <use href="./images/sprite.svg#drk-mode"></use>
-          </svg>
-        </button>
+
+        <div class="header-toggler-wrapper">
+          <input
+            class="checkbox-switch visually-hidden"
+            type="checkbox"
+            name="theme-switcher"
+            id="theme-switcher"
+          />
+          <label class="header-theme-toggler" for="theme-switcher">
+            <svg class="theme-switcher-icon" width="24" height="24">
+              <use href="./images/sprite.svg#drk-mode"></use>
+            </svg>
+          </label>
+        </div>
+
+        <!-- <label class="header-checkbox-wrapper">
+          <input class="checkbox visually-hidden" type="checkbox" />
+          <span class="header-toggler"></span>
+        </label> -->
       </div>
     </header>
     <main>
@@ -489,156 +516,239 @@
 
       <!--Review-->
       <section class="section review">
-        <h2 class="title title-medium">What Clients Say</h2>
-        <p>
-          Problems trying to resolve the conflict between the two major realms of Classical physics:
-          Newtonian mechanics
-        </p>
-        <ul class="list">
-          <li>
-            <div>
-              <span>&#9733;</span>
-              <span>&#9733;</span>
-              <span>&#9733;</span>
-              <span>&#9733;</span>
-              <span>&#9734;</span>
-            </div>
-            <p>
-              Product helps you see how many more days you need to work to reach your financial
-              goal.
-            </p>
-            <div>
-              <img src="./images/review/avatar-1.png" alt="Designer 1" width="50" height="50" />
+        <div class="container">
+          <h2 class="title title-medium">What Clients Say</h2>
+          <p>
+            Problems trying to resolve the conflict between the two major realms of Classical
+            physics: Newtonian mechanics
+          </p>
+          <ul class="list">
+            <li>
               <div>
-                <h3>Wahid Ari</h3>
-                <p>Designer</p>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9734;</span>
               </div>
-            </div>
-          </li>
-          <li>
-            <div>
-              <span>&#9733;</span>
-              <span>&#9733;</span>
-              <span>&#9733;</span>
-              <span>&#9733;</span>
-              <span>&#9734;</span>
-            </div>
-            <p>
-              Product helps you see how many more days you need to work to reach your financial
-              goal.
-            </p>
-            <div>
-              <img src="./images/review/avatar-2.png" alt="Designer 2" width="50" height="50" />
+              <p>
+                Product helps you see how many more days you need to work to reach your financial
+                goal.
+              </p>
               <div>
-                <h3>Wahid Ari</h3>
-                <p>Designer</p>
+                <img src="./images/review/avatar-1.png" alt="Designer 1" width="50" height="50" />
+                <div>
+                  <h3>Wahid Ari</h3>
+                  <p>Designer</p>
+                </div>
               </div>
-            </div>
-          </li>
-          <li>
-            <div>
-              <span>&#9733;</span>
-              <span>&#9733;</span>
-              <span>&#9733;</span>
-              <span>&#9733;</span>
-              <span>&#9734;</span>
-            </div>
-            <p>
-              Product helps you see how many more days you need to work to reach your financial
-              goal.
-            </p>
-            <div>
-              <img src="./images/review/avatar-3.png" alt="Designer 3" width="50" height="50" />
+            </li>
+            <li>
               <div>
-                <h3>Wahid Ari</h3>
-                <p>Designer</p>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9734;</span>
               </div>
-            </div>
-          </li>
-        </ul>
+              <p>
+                Product helps you see how many more days you need to work to reach your financial
+                goal.
+              </p>
+              <div>
+                <img src="./images/review/avatar-2.png" alt="Designer 2" width="50" height="50" />
+                <div>
+                  <h3>Wahid Ari</h3>
+                  <p>Designer</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9734;</span>
+              </div>
+              <p>
+                Product helps you see how many more days you need to work to reach your financial
+                goal.
+              </p>
+              <div>
+                <img src="./images/review/avatar-3.png" alt="Designer 3" width="50" height="50" />
+                <div>
+                  <h3>Wahid Ari</h3>
+                  <p>Designer</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <!--baner-->
       <section class="section banner">
-        <div>
-          <h2>Join 100 Compannies who boost their business with Product</h2>
-          <button type="button">Get This</button>
+        <div class="container">
+          <div>
+            <h2>Join 100 Compannies who boost their business with Product</h2>
+            <button type="button">Get This</button>
+          </div>
+          <img src="./images/baner/baner-1.png" alt="baner" width="351" height="331" />
         </div>
-        <img src="./images/baner/baner-1.png" alt="baner" width="351" height="331" />
       </section>
     </main>
-    <footer>
-      <div>
-        <a class="link" href="./index.html">
-          <img src="./images/header/logo.svg" alt="logo" width="32" height="29" />
-          <p>Product</p>
-        </a>
-        <ul class="list">
-          <li>
-            <a
-              class="link"
-              href=""
-              aria-label="Instagram"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src="./images/footer/instagram.svg" alt="instagram" width="24" height="24" />
-            </a>
-          </li>
-          <li>
-            <a class="link" href="" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
-              <img src="./images/footer/facebook.svg" alt="facebook" width="24" height="24" />
-            </a>
-          </li>
-          <li>
-            <a class="link" href="" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
-              <img src="./images/footer/twitter.svg" alt="twitter" width="24" height="24" />
-            </a>
-          </li>
-        </ul>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-socials">
+          <a class="link" href="./index.html">
+            <img src="./images/header/logo.svg" alt="logo" width="32" height="29" />
+            <p>Product</p>
+          </a>
+          <ul class="list">
+            <li>
+              <a
+                class="link"
+                href=""
+                aria-label="Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="./images/footer/instagram.svg" alt="instagram" width="24" height="24" />
+              </a>
+            </li>
+            <li>
+              <a
+                class="link"
+                href=""
+                aria-label="Facebook"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="./images/footer/facebook.svg" alt="facebook" width="24" height="24" />
+              </a>
+            </li>
+            <li>
+              <a
+                class="link"
+                href=""
+                aria-label="Twitter"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="./images/footer/twitter.svg" alt="twitter" width="24" height="24" />
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-navigation">
+          <h2>Resource</h2>
+          <ul class="list">
+            <li><a class="link" href="">About Us</a></li>
+            <li><a class="link" href="">Blog</a></li>
+            <li><a class="link" href="">Contact</a></li>
+            <li><a class="link" href="">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-aside">
+          <h2>Legal Stuff</h2>
+          <ul class="list">
+            <li><a class="link" href="">Disclaimer</a></li>
+            <li><a class="link" href="">Financing</a></li>
+            <li><a class="link" href="">Privacy Policy</a></li>
+            <li><a class="link" href="">Terms of Servic</a></li>
+          </ul>
+        </div>
+        <div class="subscription">
+          <h2 class="subscription-title">knowing you're always on the best energy deal.</h2>
+          <form class="subscribtion-form">
+            <label class="subscribtion-field">
+              <input class="subscribtion-input" type="text" />
+            </label>
+            <button class="subscribtion-btn accent-button" type="submit">
+              Sign up Now
+              <svg class="subscribtion-icon" width="24" height="24">
+                <use href="./images/sprite.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
+        <p class="footer-copyright">Made With Love By Figmaland All Right Reserved</p>
       </div>
-      <div>
-        <h2>Resource</h2>
-        <ul class="list">
-          <li><a class="link" href="">About Us</a></li>
-          <li><a class="link" href="">Blog</a></li>
-          <li><a class="link" href="">Contact</a></li>
-          <li><a class="link" href="">FAQ</a></li>
-        </ul>
-      </div>
-      <div>
-        <h2>Legal Stuff</h2>
-        <ul class="list">
-          <li><a class="link" href="">Disclaimer</a></li>
-          <li><a class="link" href="">Financing</a></li>
-          <li><a class="link" href="">Privacy Policy</a></li>
-          <li><a class="link" href="">Terms of Servic</a></li>
-        </ul>
-      </div>
-      <div>
-        <h2>knowing you're always on the best energy deal.</h2>
-        <form>
-          <input type="text" />
-          <button type="submit">Sign up Now</button>
-        </form>
-      </div>
-      <p>Made With Love By Figmaland All Right Reserved</p>
     </footer>
 
     <!-- Modal form -->
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop" data-modal>
       <div class="modal">
         <button class="modal-close-btn" type="button" data-modal-close>
           <svg class="modal-close-icon" width="30" height="30">
             <use href="./images/sprite.svg#icon-close"></use>
           </svg>
         </button>
+
+        <form class="modal-form">
+          <label class="form-field">
+            <input
+              class="form-input"
+              type="text"
+              name="user-name"
+              minlength="5"
+              placeholder="Enter username"
+            />
+            <span class="form-label">Username</span>
+            <span class="note">Username must be at least 5 symbols</span>
+            <svg class="form-icon" width="24" height="24">
+              <use class="icon-error" href="./images/form-icons.svg#icon-error"></use>
+              <use class="icon-success" href="./images/form-icons.svg#icon-success"></use>
+            </svg>
+          </label>
+
+          <label class="form-field">
+            <input
+              class="form-input"
+              id="js-mask"
+              type="tel"
+              name="user-phone"
+              minlength="3"
+              placeholder=" "
+            />
+            <span class="form-label">Phone</span>
+          </label>
+
+          <label class="form-field">
+            <input
+              class="form-input"
+              type="password"
+              name="user-password"
+              minlength="3"
+              maxlength="12"
+              placeholder="Enter password"
+            />
+            <span class="form-label">Password</span>
+          </label>
+          <!-- Select with options -->
+          <select class="select js-choice" name="" id="">
+            <option value="option-1">Dropdown option 1</option>
+            <option value="option-2">Dropdown option 2</option>
+            <option value="option-3" selected>Dropdown option 3</option>
+          </select>
+        </form>
       </div>
     </div>
 
+    <!-- Show/hide modal window -->
     <script src="./js/modal.js"></script>
-    <!-- Animation library -->
+
+    <!-- AOS animation library -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/aos-animation.js"></script>
+
+    <!-- Choices.js for select tag -->
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="./js/choices.js"></script>
+
+    <!-- InputMask for phone -->
+    <script src="./js/inputmask.min.js"></script>
+    <script src="./js/phone-mask.js"></script>
   </body>
 </html>

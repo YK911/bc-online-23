@@ -1,0 +1,258 @@
+/**
+  |============================
+  | modal window
+  |============================
+*/
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(0, 0, 0, 0.3);
+
+  /* opacity: 1;
+  visibility: visible;
+  pointer-events: initial; */
+
+  transition-property: opacity, visibility;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in;
+  transition-delay: 0s;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 564px;
+  padding: 40px;
+
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+
+.modal-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background-color: transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.modal-close-icon {
+  fill: #02897a;
+}
+
+/**
+  |============================
+  | Modal form styles
+  |============================
+*/
+.form-field {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  padding-top: 26px;
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #666666;
+
+  margin-bottom: 10px;
+}
+
+.form-field:last-of-type {
+  margin-bottom: 32px;
+}
+
+.form-label {
+  position: absolute;
+  top: 0;
+  left: 16px;
+
+  transform: translateY(calc(100% + 26px)) scale(1.2);
+  transition: transform 400ms ease-out;
+}
+
+.form-input:focus+.form-label,
+.form-input:not(:placeholder-shown)+.form-label {
+  transform: translateX(-16px) translateY(0) scale(1);
+}
+
+.form-input {
+  width: 100%;
+  height: 56px;
+  padding: 16px;
+
+  font-size: 16px;
+
+  background-color: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  border-radius: 8px;
+  outline: transparent;
+
+  transition: 400ms ease-out;
+}
+
+.form-input:focus:valid:not(:placeholder-shown),
+.form-input:valid:not(:placeholder-shown) {
+  border-color: #02897a;
+}
+
+.form-input::placeholder {
+  color: transparent;
+  transition: color 400ms ease-out 50ms;
+}
+
+.form-input:focus::placeholder {
+  color: #666666;
+}
+
+.note {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(120%);
+
+  color: #CCCCCC;
+  opacity: 0;
+  transition: opacity 400ms ease-out;
+}
+
+.form-input:focus~.note {
+  opacity: 1;
+}
+
+.form-input:focus:valid~.note {
+  opacity: 0;
+}
+
+.form-icon {
+  position: absolute;
+  top: 0;
+  right: 16px;
+  transform: translateY(calc(100% + 18px));
+}
+
+.icon-success,
+.icon-error {
+  opacity: 0;
+  transform: scale(0.4);
+  transform-origin: center;
+  transition: opacity 400ms ease-out, transform 400ms ease-out;
+}
+
+.form-input:focus:valid:not(:placeholder-shown)~.form-icon>.icon-success,
+.form-input:valid:not(:placeholder-shown)~.form-icon>.icon-success {
+  opacity: 1;
+  transform: scale(1);
+  fill: #02897a;
+}
+
+.form-input:focus:invalid~.form-icon>.icon-error {
+  opacity: 1;
+  transform: scale(1);
+  fill: #EB5757;
+}
+
+/**
+  |============================
+  | select styling with Choices.js
+  |============================
+*/
+/* Стилізація поля результата вибору  */
+.modal .choices__inner {
+  background-color: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  border-radius: 8px;
+  transition: outline 200ms ease-in-out;
+}
+
+/* Вибираємо select і стилізуємо його рамку при фокусі */
+.modal .choices.is-focused .choices__inner {
+  outline: 2px solid #02897a;
+  outline-offset: -2px;
+}
+
+/* Стилізація іконки іденитфікатора відкритого/закритого списку опцій  */
+.choices[data-type*=select-one]::after {
+  width: 24px;
+  height: 24px;
+  margin: 0;
+
+  transform: translateY(-50%);
+  transition: transform 400ms ease;
+
+  background-image: url(../images/icons/icon-select.svg);
+  background-size: contain;
+  background-position: center;
+
+  /* diactivated default icon */
+  border: none;
+}
+
+.choices[data-type*=select-one].is-open::after {
+  margin: 0;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+/* Стилізація рамки при відкритому списку опцій */
+.is-open .choices__list--dropdown,
+.is-open .choices__list[aria-expanded] {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+/* Стилізація рамки поля з опціями вибору при виборі елементу  */
+.choices.is-open .choices__inner {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+/* Підсвітка поточного елементи при ховері на ньому  */
+.choices__list--dropdown .choices__item--selectable.is-highlighted,
+.choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+  background-color: #02897a;
+  color: #FFFFFF;
+  border: 1px solid #CCCCCC;
+}
+
+/**
+  |============================
+  | footer form
+  |============================
+*/
+
+.form-btn {
+  display: inline-flex;
+  align-items: center;
+
+  /* vertical-align: middle; */
+}
+
+.form-icon {
+  /* vertical-align: middle; */
+  margin-left: 10px;
+}
