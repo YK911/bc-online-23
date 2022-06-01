@@ -75,19 +75,18 @@ img {
   color: #22343d;
 }
 
-.title-small {
+.title--small {
   margin-bottom: 23px;
   font-size: 32px;
 }
 
-.title-medium {
+.title--medium {
   text-align: center;
   font-size: 34px;
   margin-bottom: 8px;
 }
 
-.main-button,
-.accent-button {
+.btn {
   max-width: 216px;
   min-width: 110px;
   padding: 14px 30px;
@@ -104,26 +103,27 @@ img {
   transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.main-button {
+.btn--primary {
   border-color: #bcd0e5;
 
   color: var(--logo-cl);
   background-color: var(--secondary-txt-cl);
 }
 
-.main-button:hover,
-.main-button:focus {
+.btn--primary:hover,
+.btn--primary:focus {
   color: var(--secondary-txt-cl);
   background-color: var(--accent-txt-cl);
 }
 
-.accent-button {
+/* accent-button */
+.btn--secondary {
   color: var(--secondary-txt-cl);
   background-color: var(--accent-txt-cl);
 }
 
-.accent-button:hover,
-.accent-button:focus {
+.btn--secondary:hover,
+.btn--secondary:focus {
   color: var(--logo-cl);
   background-color: var(--secondary-txt-cl);
   border-color: #bcd0e5;
@@ -160,7 +160,7 @@ img {
   margin-top: -30px; */
 }
 
-.grid-item {
+.grid__item {
   flex-basis: calc((100% - var(--indent) * var(--items)) / var(--items));
 
   /* Вирішує проблему випадіння маржинів за межі контейнеру */
@@ -262,7 +262,6 @@ img {
 }
 
 .hero .right-side {
-
   animation: slide-left 1.6s ease-in-out 400ms backwards;
 }
 
@@ -497,7 +496,7 @@ img {
   background-position: left 50% bottom 75px;
 }
 
-.feature-title {
+.feature__title {
   width: 534px;
   margin-bottom: 66px;
   text-align: center;
@@ -511,16 +510,15 @@ img {
   margin-bottom: 34px;
 }
 
-.feature-item {
+.feature-list__item {
   /* position: relative;
   padding-top: 80px; */
 }
 
-.feature-item::before {
+.feature-list__item::before {
   /* position: absolute;
   top: 0;
   left: 0; */
-
 
   content: '';
   display: inline-block;
@@ -534,41 +532,23 @@ img {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-.feature-item-arrow::before {
+.feature-list__item--arrow::before {
   background-image: url(../images/features/feature-icon-1.svg);
 }
 
-.feature-item-design::before {
+.feature-list__item--design::before {
   background-image: url(../images/features/feature-icon-2.svg);
 }
 
-.feature-item-heart::before {
+.feature-list__item--heart::before {
   background-image: url(../images/features/feature-icon-3.svg);
 }
 
-.feature-item-clock::before {
+.feature-list__item--clock::before {
   background-image: url(../images/features/feature-icon-4.svg);
 }
 
-/* .feature-item {
-  outline: 1px solid red;
-  background-color: blueviolet;
-  width: 255px;
-} */
-
-/* .feature-item:not(:last-child) {
-  margin-right: 30px;
-} */
-
-/* .feature-item + .feature-item {
-  margin-left: 30px;
-} */
-
-.feature-icon {
-  margin-bottom: 30px;
-}
-
-.feature-item-title {
+.feature-list__title {
   font-weight: 600;
   font-size: 22px;
   line-height: 1.5;
@@ -577,7 +557,7 @@ img {
   color: #22343d;
 }
 
-.feature-btn {
+.feature__accent-button {
   display: block;
   margin: 0 auto;
 }
@@ -846,7 +826,7 @@ img {
 
 /* price */
 
-.title-medium+p {
+.title--medium+p {
   text-align: center;
   margin-bottom: 50px;
 }
