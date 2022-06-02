@@ -1,0 +1,86 @@
+/* Feature section */
+.feature {
+  /* Обмеження ширини фонового зображення */
+  /* max-width: 1400px;
+  margin: 0 auto; */
+
+  padding-bottom: 165px;
+
+  /* background-image: linear-gradient(
+      to top,
+      rgba(255, 230, 0, 0.999) 20%,
+      rgba(0, 94, 255, 0.5) 20%,
+      rgba(0, 94, 255, 0.5) 50%,
+      rgba(238, 0, 255, 0.5) 50%
+    ),
+    url(../images/icons/arrow.svg), url(../images/features/feature-bg.svg);
+  background-position: center, left calc(50% + 120px) bottom calc(50% - 170px), left 50% bottom 75px;
+  background-size: contain, 50px 100px, contain;
+  background-repeat: no-repeat; */
+
+  background-image: url(../images/features/feature-bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left 50% bottom 75px;
+}
+
+.feature__title {
+  width: 534px;
+  margin-bottom: 66px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.feature-list {
+  --items: 4;
+
+  margin-bottom: 34px;
+}
+
+.feature-list__item::before {
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+
+  content: '';
+  display: inline-block;
+  width: 54px;
+  height: 50px;
+  margin-bottom: 30px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.feature-list__item--arrow::before {
+  background-image: url(../images/features/feature-icon-1.svg);
+}
+
+.feature-list__item--design::before {
+  background-image: url(../images/features/feature-icon-2.svg);
+}
+
+.feature-list__item--heart::before {
+  background-image: url(../images/features/feature-icon-3.svg);
+}
+
+.feature-list__item--clock::before {
+  background-image: url(../images/features/feature-icon-4.svg);
+}
+
+.feature-list__title {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.5;
+  margin-bottom: 13px;
+
+  color: #22343d;
+}
+
+.feature__accent-button {
+  display: block;
+  margin: 0 auto;
+}

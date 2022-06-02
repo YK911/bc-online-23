@@ -1,0 +1,28 @@
+/* main-button */
+
+.btn--primary {
+  @extend %button;
+  border-color: #bcd0e5;
+
+  color: var(--logo-cl);
+  background-color: var(--secondary-txt-cl);
+
+  &:hover,
+  &:focus {
+    color: var(--secondary-txt-cl);
+    background-color: var(--accent-txt-cl);
+  }
+}
+
+/* accent-button */
+.btn--secondary {
+  @extend %button;
+  color: var(--secondary-txt-cl);
+  background-color: var(--accent-txt-cl);
+  &:hover,
+  &:focus {
+    color: var(--logo-cl);
+    background-color: var(--secondary-txt-cl);
+    border-color: #bcd0e5;
+  }
+}

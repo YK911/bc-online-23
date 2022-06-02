@@ -1,0 +1,45 @@
+/* Header styles */
+.header-box {
+  display: flex;
+  align-items: center;
+}
+
+.navigation {
+  margin-right: 24px;
+}
+
+.nav-list {
+  display: flex;
+}
+
+.nav-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.nav-link {
+  display: block;
+  padding: 26px 0;
+  line-height: 1.75;
+  color: var(--main-txt-cl);
+
+  &.current {
+    font-weight: 600;
+  }
+}
+
+.auth-list {
+  display: flex;
+}
+
+.auth-item:not(:last-child) {
+  margin-right: 24px;
+}
+
+.theme-switcher {
+  padding: 0;
+  margin-left: 23px;
+
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}

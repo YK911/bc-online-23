@@ -1,0 +1,37 @@
+@mixin fonts($fz: 16px, $fw: 400, $lh: 16px, $ls: null) {
+  font-size: $fz;
+  font-weight: $fw;
+  line-height: lh($fz, $lh);
+  letter-spacing: $ls;
+}
+
+@mixin font-source-sans($size, $colour: false, $weight: false, $lh: false) {
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+
+  font-size: $size;
+
+  // @if $size {
+  // }
+  @if $colour {
+    color: $colour;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $lh {
+    line-height: $lh;
+  }
+}
+
+// @function lh($fz, $lh) {
+//   @return $lh / $fz;
+// }
+
+@mixin avatar($size, $circle: false) {
+  width: $size;
+  height: $size;
+
+  @if $circle {
+    border-radius: $size / 2;
+  }
+}

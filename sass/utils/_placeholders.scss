@@ -1,0 +1,16 @@
+%button {
+  max-width: 216px;
+  min-width: 110px;
+  padding: 14px 30px;
+  font-family: inherit;
+  font-weight: 600;
+  line-height: 1.5;
+
+  border: 1px solid transparent;
+  border-radius: var(--boreder);
+  cursor: pointer;
+
+  transition-property: border-color, color, background-color;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}

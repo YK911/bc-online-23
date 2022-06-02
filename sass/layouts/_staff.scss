@@ -1,0 +1,73 @@
+/* staff section */
+.staff-title {
+  text-align: center;
+}
+
+.staff-text {
+  width: 542px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 32px;
+}
+
+.staff-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 24px;
+  margin-bottom: 48px;
+
+  perspective: 1000px;
+}
+
+.staff-item {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+
+  transition: transform 400ms ease-in-out;
+}
+
+.staff-item:nth-child(odd) {
+  transform-origin: left;
+  transform: rotateX(5deg) rotateY(25deg);
+}
+
+.staff-item:nth-child(odd):hover {
+  transform: rotateX(5deg) rotateY(0deg);
+}
+
+.staff-item:nth-child(even) {
+  transform-origin: right;
+  transform: rotateX(-5deg) rotateY(-25deg);
+}
+
+.staff-item:nth-child(even):hover {
+  transform: rotateX(-5deg) rotateY(0deg);
+}
+
+.staff-item-quote {
+  border-radius: 30px;
+  padding: 15px 25px 30px;
+  margin-right: 16px;
+
+  background-image: url(../images/customer-support/mind.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.staff-item:nth-child(4n + 1),
+.staff-item:nth-child(4n + 4) {
+  flex-direction: row;
+}
+
+.staff-item:nth-child(3n + 1) .staff-item-quote {
+  margin-left: 16px;
+  margin-right: 0;
+}
+
+.staff-btn {
+  display: block;
+  margin: 0 auto;
+}

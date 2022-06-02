@@ -1,0 +1,17 @@
+.logo {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 0.93;
+  color: var(--logo-cl);
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+
+.logo-img {
+  margin-right: 16px;
+}
+
+.logo-txt {
+  animation: txt-slide 600ms ease 1s both;
+}
