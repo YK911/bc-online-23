@@ -39,7 +39,7 @@
 .hero-btn {
   margin-right: 30px;
 
-  animation: swing 6s infinite 4s forwards;
+  animation: swing 6s infinite 4s;
 }
 
 .hero-link {
@@ -76,7 +76,7 @@
   height: 100%;
 
   background-color: #fff;
-  animation: slide-to-right 4s both 12s;
+  animation: slide-to-right 2100ms both 12.2s;
 }
 
 #speech-buble-1 {

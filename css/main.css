@@ -287,7 +287,7 @@ summary {
   margin: -1px;
 }
 
-.btn--primary, .btn--secondary {
+.btn {
   max-width: 216px;
   min-width: 110px;
   padding: 14px 30px;
@@ -302,6 +302,13 @@ summary {
   transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
+/**
+  |============================
+  | Пропустити значення в міксіні
+  | можна за домогою зарезервованого
+  | слова null
+  |============================
+*/
 /* Common styles */
 body {
   font-family: 'Poppins', sans-serif;
@@ -322,16 +329,14 @@ body {
 }
 
 .title {
-  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
-  color: red;
-  font-weight: 600;
+  color: #22343d;
 }
 
 .title--small {
   margin-bottom: 23px;
   font-size: 32px;
   font-weight: 700;
-  line-height: lh(32px, 1.5);
+  line-height: 1.5;
 }
 
 .title--medium {
@@ -339,7 +344,7 @@ body {
   margin-bottom: 8px;
   font-size: 34px;
   font-weight: 700;
-  line-height: lh(34px, 1.5);
+  line-height: 1.5;
 }
 
 h1,
@@ -495,27 +500,33 @@ img {
 
 @keyframes swing {
   0% {
-    transform: rotate(-6deg);
-  }
-  4% {
-    transform: rotate(6deg);
-  }
-  8% {
     transform: rotate(-2deg);
   }
-  12% {
+  3% {
     transform: rotate(2deg);
   }
-  16% {
+  6% {
     transform: rotate(-4deg);
   }
-  20% {
+  9% {
+    transform: rotate(4deg);
+  }
+  12% {
+    transform: rotate(-6deg);
+  }
+  15% {
+    transform: rotate(6deg);
+  }
+  18% {
+    transform: rotate(-4deg);
+  }
+  21% {
     transform: rotate(4deg);
   }
   24% {
     transform: rotate(-2deg);
   }
-  28% {
+  27% {
     transform: rotate(2deg);
   }
   30% {
@@ -526,6 +537,16 @@ img {
   }
 }
 
+@keyframes hvr-ripple-out {
+  100% {
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0;
+  }
+}
+
 /* main-button */
 .btn--primary {
   border-color: #bcd0e5;
@@ -533,9 +554,14 @@ img {
   background-color: var(--secondary-txt-cl);
 }
 
-.btn--primary:hover, .btn--primary:focus {
-  color: var(--secondary-txt-cl);
-  background-color: var(--accent-txt-cl);
+.btn--primary::after {
+  content: '';
+  position: absolute;
+  border: var(--secondary-txt-cl) solid 6px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 /* accent-button */
@@ -544,10 +570,30 @@ img {
   background-color: var(--accent-txt-cl);
 }
 
-.btn--secondary:hover, .btn--secondary:focus {
-  color: var(--logo-cl);
-  background-color: var(--secondary-txt-cl);
-  border-color: #bcd0e5;
+.hvr-ripple-out {
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+}
+
+.hvr-ripple-out:before {
+  content: '';
+  position: absolute;
+  border: #02897a solid 6px;
+  border-radius: 6px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  animation-duration: 1s;
+}
+
+.hvr-ripple-out:hover:before,
+.hvr-ripple-out:focus:before,
+.hvr-ripple-out:active:before {
+  animation-name: hvr-ripple-out;
 }
 
 .logo {
@@ -560,11 +606,11 @@ img {
   margin-right: auto;
 }
 
-.logo-img {
+.logo__img {
   margin-right: 16px;
 }
 
-.logo-txt {
+.logo__txt {
   animation: txt-slide 600ms ease 1s both;
 }
 
@@ -600,7 +646,7 @@ img {
 }
 
 /* Header styles */
-.header-box {
+.header__container {
   display: flex;
   align-items: center;
 }
@@ -613,18 +659,18 @@ img {
   display: flex;
 }
 
-.nav-item:not(:last-child) {
+.nav-list__item:not(:last-child) {
   margin-right: 30px;
 }
 
-.nav-link {
+.nav-list__link {
   display: block;
   padding: 26px 0;
   line-height: 1.75;
   color: var(--main-txt-cl);
 }
 
-.nav-link.current {
+.nav-list__link--current {
   font-weight: 600;
 }
 
@@ -632,16 +678,22 @@ img {
   display: flex;
 }
 
-.auth-item:not(:last-child) {
+.auth-list__item:not(:last-child) {
   margin-right: 24px;
 }
 
-.theme-switcher {
+.switcher {
   padding: 0;
   margin-left: 23px;
   border: none;
   background-color: transparent;
   cursor: pointer;
+}
+
+.switcher__group {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Hero section */
@@ -678,7 +730,7 @@ img {
 
 .hero-btn {
   margin-right: 30px;
-  animation: swing 6s infinite 4s forwards;
+  animation: swing 6s infinite 4s;
 }
 
 .hero-link {
@@ -713,7 +765,7 @@ img {
   width: 110%;
   height: 100%;
   background-color: #fff;
-  animation: slide-to-right 4s both 12s;
+  animation: slide-to-right 2100ms both 12.2s;
 }
 
 #speech-buble-1 {

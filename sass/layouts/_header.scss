@@ -1,5 +1,5 @@
 /* Header styles */
-.header-box {
+.header__container {
   display: flex;
   align-items: center;
 }
@@ -12,17 +12,19 @@
   display: flex;
 }
 
-.nav-item:not(:last-child) {
-  margin-right: 30px;
+.nav-list__item {
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
-.nav-link {
+.nav-list__link {
   display: block;
   padding: 26px 0;
   line-height: 1.75;
   color: var(--main-txt-cl);
 
-  &.current {
+  &--current {
     font-weight: 600;
   }
 }
@@ -31,15 +33,23 @@
   display: flex;
 }
 
-.auth-item:not(:last-child) {
-  margin-right: 24px;
+.auth-list__item {
+  &:not(:last-child) {
+    margin-right: 24px;
+  }
 }
 
-.theme-switcher {
+.switcher {
   padding: 0;
   margin-left: 23px;
 
   border: none;
   background-color: transparent;
   cursor: pointer;
+}
+
+.switcher__group {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }

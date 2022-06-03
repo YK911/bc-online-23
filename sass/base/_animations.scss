@@ -106,26 +106,33 @@
 
 @keyframes swing {
   0% {
-    transform: rotate(-6deg);
-  }
-
-  4% {
-    transform: rotate(6deg);
-  }
-
-  8% {
     transform: rotate(-2deg);
   }
 
-  12% {
+  3% {
     transform: rotate(2deg);
   }
 
-  16% {
+  6% {
     transform: rotate(-4deg);
   }
 
-  20% {
+  9% {
+    transform: rotate(4deg);
+  }
+  12% {
+    transform: rotate(-6deg);
+  }
+
+  15% {
+    transform: rotate(6deg);
+  }
+
+  18% {
+    transform: rotate(-4deg);
+  }
+
+  21% {
     transform: rotate(4deg);
   }
 
@@ -133,7 +140,7 @@
     transform: rotate(-2deg);
   }
 
-  28% {
+  27% {
     transform: rotate(2deg);
   }
 
@@ -143,5 +150,15 @@
 
   100% {
     transform: rotate(0);
+  }
+}
+
+@keyframes hvr-ripple-out {
+  100% {
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0;
   }
 }

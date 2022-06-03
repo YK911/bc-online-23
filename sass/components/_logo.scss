@@ -6,12 +6,12 @@
   display: flex;
   align-items: center;
   margin-right: auto;
-}
 
-.logo-img {
-  margin-right: 16px;
-}
+  &__img {
+    margin-right: 16px;
+  }
 
-.logo-txt {
-  animation: txt-slide 600ms ease 1s both;
+  &__txt {
+    animation: txt-slide 600ms ease 1s both;
+  }
 }
