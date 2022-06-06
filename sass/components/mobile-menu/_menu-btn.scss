@@ -1,4 +1,5 @@
 .menu-btn {
+  /* standard button styles */
   // display: flex;
   // align-items: center;
   // justify-content: center;
@@ -8,6 +9,9 @@
 
   // background-color: transparent;
   // border: none;
+  @include mq(tablet) {
+    display: none;
+  }
 
   &.hamburger {
     position: relative;
@@ -33,4 +37,11 @@
   .menu-btn.is-open & {
     opacity: 1;
   }
+}
+
+// custom hamburger lines style
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: #000;
 }

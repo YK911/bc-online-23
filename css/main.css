@@ -197,7 +197,7 @@
 .hamburger.is-active .hamburger-inner,
 .hamburger.is-active .hamburger-inner::before,
 .hamburger.is-active .hamburger-inner::after {
-  background-color: #000;
+  background-color: #fff;
 }
 
 .hamburger-box {
@@ -216,7 +216,7 @@
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
   width: 24px;
   height: 3px;
-  background-color: #000;
+  background-color: #fff;
   border-radius: 2px;
   position: absolute;
   transition-property: transform;
@@ -1486,6 +1486,16 @@ a {
 }
 
 /* Components */
+.menu-btn {
+  /* standard button styles */
+}
+
+@media screen and (min-width: 768px) {
+  .menu-btn {
+    display: none;
+  }
+}
+
 .menu-btn.hamburger {
   position: relative;
   z-index: 10;
@@ -1511,6 +1521,12 @@ a {
   opacity: 1;
 }
 
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: #000;
+}
+
 .menu-overlay {
   position: fixed;
   top: 0;
@@ -1531,10 +1547,13 @@ a {
 }
 
 .menu {
+  position: absolute;
+  top: 0;
+  right: 0;
   max-width: 337px;
   height: 100%;
-  margin-left: auto;
-  padding: 118px 40px;
+  padding: 40px;
+  padding-top: 118px;
   display: flex;
   flex-direction: column;
   background-color: #fff;
@@ -1595,6 +1614,10 @@ a {
   width: 60px;
   height: 1px;
   background-color: #303030;
+}
+
+.menu-socials-item:last-child {
+  align-self: flex-end;
 }
 
 .menu-socials-link {
@@ -1700,10 +1723,15 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding-bottom: 40px;
-  padding-right: 55px;
-  padding-left: 100px;
   z-index: 1;
+}
+
+@media screen and (min-width: 1280px) {
+  .hero__inner {
+    padding-bottom: 40px;
+    padding-right: 55px;
+    padding-left: 100px;
+  }
 }
 
 .hero__wrapper {
@@ -1733,8 +1761,8 @@ a {
 }
 
 .hero__description {
-  color: #9da4bd;
   max-width: 486px;
+  color: #9da4bd;
 }
 
 .hero__bullets {

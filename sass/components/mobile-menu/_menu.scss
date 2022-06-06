@@ -1,8 +1,12 @@
 .menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+
   max-width: 337px;
   height: 100%;
-  margin-left: auto;
-  padding: 118px 40px;
+  padding: 40px;
+  padding-top: 118px;
 
   display: flex;
   flex-direction: column;
@@ -71,6 +75,10 @@
       height: 1px;
       background-color: #303030;
     }
+  }
+
+  &:last-child {
+    align-self: flex-end;
   }
 }
 
