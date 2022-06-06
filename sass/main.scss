@@ -1,11 +1,25 @@
-// utils
-@import './utils/module';
+/* Utils */
+@import './utils/variables';
+@import './utils/mixins';
+@import './utils/placeholders';
+@import './utils/common';
+@import './utils/hamburgers/hamburgers';
 
-// base
-@import './base/module';
+/* Base */
+@import './base/normalize';
+@import './base/fonts';
+@import './base/reset';
+@import './base/container';
 
-//components
-@import './components/module';
-
-// layouts
-@import './layouts/module';
+/* Components */
+@import './components/mobile-menu/module';
+@import './components/hero';
+@import './components/header';
+@import './components/best-barber';
+@import './components/service';
+@import './components/master';
+@import './components/our-chioce';
+@import './components/our-masters';
+@import './components/gallery';
+@import './components/contact-us';
+@import './components/footer';

@@ -1,0 +1,36 @@
+.menu-btn {
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  // width: 40px;
+  // height: 40px;
+  // padding: 0;
+
+  // background-color: transparent;
+  // border: none;
+
+  &.hamburger {
+    position: relative;
+    z-index: 10;
+  }
+}
+
+.menu-icon-burger {
+  fill: #ffffff;
+  opacity: 1;
+  transition: opacity 400ms;
+
+  .menu-btn.is-open & {
+    opacity: 0;
+  }
+}
+
+.menu-icon-close {
+  fill: #303030;
+  opacity: 0;
+  transition: opacity 400ms;
+
+  .menu-btn.is-open & {
+    opacity: 1;
+  }
+}

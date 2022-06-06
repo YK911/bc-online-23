@@ -1,16 +1,67 @@
-%button {
-  max-width: 216px;
-  min-width: 110px;
-  padding: 14px 30px;
-  font-family: inherit;
+%c-section {
+  padding-top: 84px;
+  padding-bottom: 84px;
+
+  @include mq(tablet) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @include mq(desktop) {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
+}
+
+%visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+%c-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   font-weight: 600;
-  line-height: 1.5;
+  font-size: 12px;
+  line-height: 1.3;
+  letter-spacing: 0.09em;
+  border: 1px solid $accent-color;
+  border-radius: 25px;
+  color: $white;
+  padding: 12px 23px;
 
-  border: 1px solid transparent;
-  border-radius: var(--boreder);
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: transparent;
   cursor: pointer;
+  transition: all $transition-duration;
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: $white;
+  }
+}
 
-  transition-property: border-color, color, background-color;
-  transition-duration: 300ms;
-  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+%transitionGrayLink {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.3;
+
+  letter-spacing: 0.2em;
+
+  color: $title-color;
+  text-decoration: none;
+  transition: color $transition-duration;
+  &:hover {
+    color: $accent-color;
+  }
 }

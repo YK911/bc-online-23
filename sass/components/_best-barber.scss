@@ -1,0 +1,77 @@
+.best-barber {
+  @extend %c-section;
+  & > .container {
+    @include mq(tablet) {
+      display: flex;
+    }
+  }
+}
+.best-barber__left {
+  @include mq(mobile-only) {
+    display: none;
+  }
+
+  @include mq(tablet) {
+    max-width: 330px;
+  }
+
+  @include mq(desktop) {
+    display: flex;
+    flex-basis: 570px;
+    max-width: 570px;
+  }
+}
+
+.best-barber__img {
+  &:not(:first-child) {
+    @include mq(tablet-only) {
+      margin-top: 30px;
+    }
+
+    @include mq(desktop) {
+      margin-left: 30px;
+    }
+  }
+
+  & > img {
+    width: 100%;
+
+    @include mq(tablet-only) {
+      width: 330px;
+      height: 235px;
+    }
+  }
+}
+
+.best-barber__right {
+  @include mq(tablet) {
+    margin-left: 30px;
+    max-width: 330px;
+  }
+
+  @include mq(desktop) {
+    margin-left: 64px;
+    max-width: 500px;
+    flex-basis: 500px;
+  }
+
+  & > .c-text-14 {
+    margin-bottom: 40px;
+  }
+}
+
+.best-barber__note {
+  margin-bottom: 20px;
+
+  font-size: 16px;
+  line-height: 1.62;
+
+  @include mq(desktop) {
+    font-size: 18px;
+  }
+}
+
+.best-barber__btn {
+  @extend %c-btn;
+  color: $title-color;
+}

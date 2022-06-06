@@ -1,81 +1,50 @@
-/**
-  |============================
-  | Пропустити значення в міксіні
-  | можна за домогою зарезервованого
-  | слова null
-  |============================
-*/
-@mixin fonts($fs: 16px, $fw: false, $lh: 16px, $ls: false) {
-  @if ($fs) {
-    font-size: $fs;
-  }
-  @if ($fw) {
-    font-weight: $fw;
-  }
-  @if ($lh) {
-    line-height: setLineHeight($lh, $fs);
-  }
-  @if ($ls) {
-    letter-spacing: $ls;
-  }
+@mixin centeredFlex(
+  $justifyContent: center,
+  $alignItems: center,
+  $display: flex,
+  $flexDirection: row
+) {
+  display: $display;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+  flex-direction: $flexDirection;
 }
 
-// Calculating line-height value to multiplier
-@function setLineHeight($lh, $fs) {
-  $lh-no-units: strip-unit($lh);
-  $fs-no-units: strip-unit($fs);
+@mixin mq($type) {
+  // brakpoints
+  $mobile: 480px;
+  $tablet: 768px;
+  $desktop: 1280px;
 
-  $lh-value: $lh-no-units / $fs-no-units;
-
-  $line-height: decimal-round($lh-value, 2);
-
-  @return $line-height;
-}
-
-// Delete unit from incoming value
-@function strip-unit($number) {
-  @if type-of($number) == 'number' and not unitless($number) {
-    @return $number / ($number * 0 + 1);
+  // перевірки по медіазапитам
+  @if $type == 'mobile-only' {
+    @media screen and (max-width: #{$mobile - 0.02}) {
+      @content;
+    }
   }
-
-  @return $number;
-}
-
-@function decimal-round($number, $digits: 0, $mode: round) {
-  $n: 1;
-  // $number must be a number
-  @if type-of($number) != number {
-    @warn '#{ $number } is not a number.';
-    @return $number;
+  @if $type == 'mobile' {
+    @media screen and (min-width: $mobile) {
+      @content;
+    }
   }
-  // $digits must be a unitless number
-  @if type-of($digits) != number {
-    @warn '#{ $digits } is not a number.';
-    @return $number;
-  } @else if not unitless($digits) {
-    @warn '#{ $digits } has a unit.';
-    @return $number;
+  @if $type == 'tablet-only' {
+    @media screen and (min-width: $tablet) and (max-width: #{$desktop - 0.02}) {
+      @content;
+    }
   }
-  @for $i from 1 through $digits {
-    $n: $n * 10;
+  @if $type == 'tablet' {
+    @media screen and (min-width: $tablet) {
+      @content;
+    }
   }
-  @if $mode == round {
-    @return round($number * $n) / $n;
-  } @else if $mode == ceil {
-    @return ceil($number * $n) / $n;
-  } @else if $mode == floor {
-    @return floor($number * $n) / $n;
-  } @else {
-    @warn '#{ $mode } is undefined keyword.';
-    @return $number;
+  @if $type == 'desktop' {
+    @media screen and (min-width: $desktop) {
+      @content;
+    }
   }
-}
-
-@mixin avatar($size, $circle: false) {
-  width: $size;
-  height: $size;
-
-  @if $circle {
-    border-radius: $size / 2;
+  @if $type == 'not-desktop' {
+    @media screen and (max-width: #{$desktop - 0.02}) {
+      @content;
+    }
   }
 }
