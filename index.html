@@ -14,19 +14,19 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="./images/apple-touch-icon.png"
+      href="./images/favicon/apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./images/favicon-32x32.png"
+      href="./images/favicon/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="./images/favicon-16x16.png"
+      href="./images/favicon/favicon-16x16.png"
     />
     <link rel="manifest" href="./site.webmanifest" />
     <!-- Ваші стилі -->
@@ -192,10 +192,18 @@
         <div class="container">
           <div class="best-barber__left">
             <div class="best-barber__img">
-              <img width="270" src="./images/beard-1.jpg" alt="Beard styling" />
+              <img
+                src="./images/best-barber/beard-1.jpg"
+                alt="Beard styling"
+                width="270"
+              />
             </div>
             <div class="best-barber__img">
-              <img width="270" src="./images/beard-2.jpg" alt="Beard-2" />
+              <img
+                src="./images/best-barber/beard-2.jpg"
+                alt="Beard-2"
+                width="270"
+              />
             </div>
           </div>
 
@@ -222,7 +230,7 @@
           </div>
         </div>
       </section>
-      <!-- <section class="service">
+      <section class="service">
         <div class="container">
           <div class="c-uptitle">
             <p>Проведи время в компании лучших мастеров</p>
@@ -271,14 +279,14 @@
                 <p>Камуфлирование седины</p>
                 <div class="service__dots"></div>
                 <p>от 200 грн.</p>
-              </li class="service__item">
+              </li>
             </ul>
           </div>
           <div class="service__btn-container">
             <a href="#" class="c-btn service__btn">Онлайн запись</a>
           </div>
         </div>
-      </section> -->
+      </section>
       <!-- <section class="our-choice">
         <div class="container">
           <ul class="our-choice__left">
@@ -405,7 +413,7 @@
           </ul>
         </div>
       </section> -->
-      <!-- <section class="gallery">
+      <section class="gallery">
         <div class="container">
           <h1 class="gallery__title">Галерея - Наші роботи</h1>
           <div class="c-uptitle gallery__uptitle">
@@ -413,20 +421,204 @@
           </div>
           <ul class="works">
             <li class="work__example">
-              <img width="270" class="work__img" src="./images/gallery-1.jpg" alt="Masters during haircut" />
+              <img
+                class="work__img"
+                srcset="
+                  ./images/gallery/w/gallery-1-270.jpg 270w,
+                  ./images/gallery/w/gallery-1-330.jpg 330w,
+                  ./images/gallery/w/gallery-1-418.jpg 418w
+                "
+                sizes="(min-width: 1280px) 270px, (min-width: 768px) 330px, (max-width: 767px) 418px, 100vw"
+                src="./images/gallery/w/gallery-1-418.jpg"
+                alt="Masters during haircut"
+                width="418"
+                height="360"
+                loading="lazy"
+              />
             </li>
             <li class="work__example">
-              <img width="270" class="work__img" src="./images/gallery-2.jpg" alt="Masters during haircut" />
+              <picture>
+                <source
+                  media="(min-width: 1280px)"
+                  srcset="
+                    ./images/gallery/gallery-2_lg.webp    1x,
+                    ./images/gallery/gallery-2_lg@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1280px)"
+                  srcset="
+                    ./images/gallery/gallery-2_lg.jpg    1x,
+                    ./images/gallery/gallery-2_lg@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/gallery-2_md.webp    1x,
+                    ./images/gallery/gallery-2_md@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/gallery-2_md.jpg    1x,
+                    ./images/gallery/gallery-2_md@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/gallery/gallery-2_sm.webp    1x,
+                    ./images/gallery/gallery-2_sm@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/gallery/gallery-2_sm.jpg    1x,
+                    ./images/gallery/gallery-2_sm@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="work__img"
+                  src="./images/gallery/gallery-2_sm.jpg"
+                  alt="Masters during haircut"
+                  width="418"
+                  height="360"
+                  loading="lazy"
+                />
+              </picture>
             </li>
             <li class="work__example">
-              <img width="270" class="work__img" src="./images/gallery-3.jpg" alt="Masters during haircut" />
+              <picture>
+                <source
+                  media="(min-width: 1280px)"
+                  srcset="
+                    ./images/gallery/gallery-3_lg.webp    1x,
+                    ./images/gallery/gallery-3_lg@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1280px)"
+                  srcset="
+                    ./images/gallery/gallery-3_lg.jpg    1x,
+                    ./images/gallery/gallery-3_lg@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/gallery-3_md.webp    1x,
+                    ./images/gallery/gallery-3_md@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/gallery-3_md.jpg    1x,
+                    ./images/gallery/gallery-3_md@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/gallery/gallery-3_sm.webp    1x,
+                    ./images/gallery/gallery-3_sm@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/gallery/gallery-3_sm.jpg    1x,
+                    ./images/gallery/gallery-3_sm@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="work__img"
+                  src="./images/gallery/gallery-3_sm.jpg"
+                  alt="Masters during haircut"
+                  width="418"
+                  height="360"
+                  loading="lazy"
+                />
+              </picture>
             </li>
             <li class="work__example">
-              <img width="270" class="work__img" src="./images/gallery-4.jpg" alt="Masters during haircut" />
+              <picture>
+                <source
+                  media="(min-width: 1280px)"
+                  srcset="
+                    ./images/gallery/gallery-4_lg.webp    1x,
+                    ./images/gallery/gallery-4_lg@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1280px)"
+                  srcset="
+                    ./images/gallery/gallery-4_lg.jpg    1x,
+                    ./images/gallery/gallery-4_lg@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/gallery-4_md.webp    1x,
+                    ./images/gallery/gallery-4_md@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/gallery-4_md.jpg    1x,
+                    ./images/gallery/gallery-4_md@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/gallery/gallery-4_sm.webp    1x,
+                    ./images/gallery/gallery-4_sm@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/gallery/gallery-4_sm.jpg    1x,
+                    ./images/gallery/gallery-4_sm@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="work__img"
+                  src="./images/gallery/gallery-4_sm.jpg"
+                  alt="Masters during haircut"
+                  width="418"
+                  height="360"
+                  loading="lazy"
+                />
+              </picture>
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- <section class="contact-us">
         <div class="container">
           <div class="contact-us__left">
